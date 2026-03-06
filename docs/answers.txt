@@ -1,0 +1,48 @@
+Git Lab Tutorials date: 03/06/2026
+GitHub Account date: ~January 2026
+My GitHub Repository: https://github.com/Douces/assignment3.git
+
+1. 
+C:\Users\mdouc\Desktop\assign3\assignment3>git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 793 bytes | 793.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Douces/assignment3.git
+   f4975e5..e1fa8b4  master -> master
+
+2.
+C:\Users\mdouc\Desktop\assign3\assignment3>git rev-list --count --all
+9
+
+3.
+C:\Users\mdouc\Desktop\assign3\assignment3>git log README.md
+Date:   Fri Mar 6 16:41:00 2026 -0600
+
+4.
+Firstly, it can isolate development work, allowing you to make changes to the programs without affecting the current version of the code.
+Secondly, it can enable multitasking between multiple individuals, where multiple people can be working on different branches at the same time.
+
+5.
+git status shows the current state of the working directory, while git log shows the historical record of the committed changes.
+
+6.
+git log -- Vehicle.h
+
+7.
+git log --grep="file"
+
+8.
+(I) Inheritance is where a child class absorbs fields and methods from it's parent class, that can also be used on the child. This reduces redundancy, so methods do not have to be re-written for each child class
+(II) Polymorphism is where objects of different types, can all be treated as instances of the parent class. For instance, the parent class Shape has a method draw(). Each of the child classes Triangle, Square, and Circle are different objects, but can define their own definition of draw() within their own class, and still be referenced as an instance object of the parent Shape within the main program.
+(III) Encapsulation is the idea of bundling all variables/fields and methods together in a single unit referred to as a class.
+
+9.
+In the "Dictator and Lieutenants" workflow, all developers work from one centralized "blessed repository", and push to lieutenant repositories. Each lieutenant repository accepts pushes from a subset of developers, and solves any arising conflicts. Each lieutenant repository then pushes to the dictator repository, which solves conflicts between the lieutenant pushes. And finally the dictator pushes to the "blessed repository" for the developers to pull from again.
+The "Integration manager" workflow still uses the centralized "blessed repository" that the developers pull from. But each developer pushes their code to their own "public repository". Then a centralized integration manager pulls from each developer's public repository, resolves any conflicts, and pushes the final product to the central "blessed repository", where the developers can pull from again.
+
+10.
+A team of 100 developers would benefit from the "Dictator and Lieutenants" workflow more, because each of the lieutenant repositories would be able to divide up the conflict resolution work, and the developers would not have to worry about that themselves. Where in the Centralized workflow, coordinating tasks between 100 developers, and resolving any conflicts between each other's commits would feel nearly impossible.
